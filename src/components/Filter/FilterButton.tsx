@@ -10,7 +10,7 @@ const FilterButton = ({ updateIsFilterOpen, isFilterOpen }: FilterButtonProps) =
 
     if (isFilterOpen) {
         return (
-            <div className="flex justify-center	 w-24 h-9 py-3 border bg-primaryBlue rounded-lg	items-center cursor-pointer" onClick={toggleFilterButton}>
+            <div className="flex justify-center	 w-24 h-9 py-3 border bg-primaryBlue rounded-lg	items-center cursor-pointer mr-2.5" onClick={toggleFilterButton}>
                 <img src={FilterSelectedIcon} alt="Filter Button" className='mr-2' />
                 <div className="text-white text-sm font-semibold">Filter</div>
             </div>)

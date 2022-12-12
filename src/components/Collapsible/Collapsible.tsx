@@ -10,9 +10,9 @@ const Collapsible = ({ filterOption, filterType, selectedFilters, updateSelected
     const [isOpen, updateIsOpen] = useState(true)
     return (
         <div className="bg-primaryGray pt-4 pb-1 pr-6 pl-5 mb-4 rounded-lg	bg-primaryDark">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4 cursor-pointer" onClick={() => updateIsOpen(!isOpen)}>
                 <div className="text-white font-medium">{filterOption.title}</div>
-                <div onClick={() => updateIsOpen(!isOpen)} className='cursor-pointer'>
+                <div>
                     {isOpen ? <img src={CloseIcon} alt="Close Icon" /> : <img src={OpenIcon} alt="Open Icon" />}
                 </div>
             </div>

@@ -33,3 +33,9 @@ export interface CollapsibleProps {
     filterOption: FilterOptionProps,
     filterType?: string
 }
+
+export interface FilterTileProps{
+    item: string,
+    label: string,
+    handleCancelClick: any
+}
