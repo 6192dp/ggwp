@@ -8,7 +8,8 @@
 
 # Tech stack used
 
-This project was bootstrapped with Create React App with Typescript and Storybook
+This project was bootstrapped with Create React App.
+It uses Typescript, TailwindCSS and Storybook
 
 ## Steps to run the app
 
