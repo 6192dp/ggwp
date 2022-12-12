@@ -3,13 +3,13 @@ import { FilterOptions, SelectedFilters } from "../Filter/types";
 const Checkbox = ({ option, selectedFilters, updateSelectedFilters }: FilterOptions) => {
 
     const isFilterIncluded = (option: string) => {
-        return selectedFilters.severity.includes(option);
+        return selectedFilters?.severity?.includes(option);
     }
 
     const handleCheckboxClicked = (option: string) => {
         let newFilters: SelectedFilters = Object.assign({}, selectedFilters);
         if (isFilterIncluded(option)) {
-            const temp = newFilters.severity.filter((i: string) => i !== option)
+            const temp = newFilters?.severity.filter((i: string) => i !== option)
             newFilters.severity = temp;
         }
         else {
