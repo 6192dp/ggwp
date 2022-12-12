@@ -1,10 +1,9 @@
 # Front-end task for ggwp.com
 # About the app
 
-1. This web application displays a list of buy orders available for a user and a list of datasets 
-2. One can also see the buy order details by clicking on any buy order from the listings page
-3. The buy orders can be edited and deleted from the buy order details page
-4. The buy orders listings also has an option to filter items by country 
+1. This web application renders a list of filters
+2. The filters can be toggled
+3. The reset button cancels all the applied filters
 
 # Tech stack used
 
@@ -26,3 +25,7 @@ It uses Typescript, TailwindCSS and Storybook
 
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser
+
+
+5. Additionally, to run storybook in the local development environment
+### `npm run storybook`
