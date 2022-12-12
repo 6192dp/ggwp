@@ -9,10 +9,10 @@ import RadioGroup from "../RadioGroup/RadioGroup";
 const Collapsible = ({ filterOption, filterType, selectedFilters, updateSelectedFilters }: CollapsibleProps) => {
     const [isOpen, updateIsOpen] = useState(true)
     return (
-        <div className="bg-primaryGray pt-4 pb-5 pr-6 pl-5">
-            <div className="flex justify-between items-center">
-                <div className="text-white">{filterOption.title}</div>
-                <div onClick={() => updateIsOpen(!isOpen)}>
+        <div className="bg-primaryGray pt-4 pb-1 pr-6 pl-5 mb-4 rounded-lg	bg-primaryDark">
+            <div className="flex justify-between items-center mb-4">
+                <div className="text-white font-medium">{filterOption.title}</div>
+                <div onClick={() => updateIsOpen(!isOpen)} className='cursor-pointer'>
                     {isOpen ? <img src={CloseIcon} alt="Close Icon" /> : <img src={OpenIcon} alt="Open Icon" />}
                 </div>
             </div>

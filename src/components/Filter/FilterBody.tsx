@@ -11,14 +11,14 @@ const FilterBody = ({selectedFilters, updateSelectedFilters, initState}: FilterB
 
     return (
 
-        <div className='bg-secondaryGray pt-7 px-5 pb-5'>
-            <div className='flex justify-between '>
-                <div className='text-white'>
+        <div className='bg-secondaryGray pt-7 px-5 pb-1 rounded-xl w-96'>
+            <div className='flex justify-between mb-7 items-center'>
+                <div className='text-white font-medium text-lg'>
                     Filter data by
                 </div>
-                <div className='flex' onClick={handleResetClick}>
-                    <img src={ResetIcon} alt="Reset Icon" />
-                    <span className='text-primaryBlue'>Reset</span>
+                <div className='flex items-center cursor-pointer' onClick={handleResetClick}>
+                    <img src={ResetIcon} alt="Reset Icon" className='h-3'/>
+                    <span className='text-primaryBlue font-semibold ml-2 text-sm font-semibold'>Reset</span>
                 </div>
             </div>
             {filterOptions?.map((filterOption: FilterOptionProps) => {

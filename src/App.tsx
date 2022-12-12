@@ -6,14 +6,19 @@ const initState = { severity: [''], time: '' }
 
 function App() {
   const [isFilterOpen, updateIsFilterOpen] = useState(false);
-  const [selectedFilters, updateSelectedFilters] = useState({...initState});
+  const [selectedFilters, updateSelectedFilters] = useState({ ...initState });
 
 
   return (
-    <>
-      <FilterButton isFilterOpen={isFilterOpen} updateIsFilterOpen={updateIsFilterOpen} />
-      {isFilterOpen ? <FilterBody updateSelectedFilters={updateSelectedFilters} selectedFilters={selectedFilters} initState={initState} /> : <div />}
-    </>
+    <div className="mt-3 ml-3.5">
+      <div className="mb-3.5">
+        <FilterButton isFilterOpen={isFilterOpen} updateIsFilterOpen={updateIsFilterOpen} />
+      </div>
+
+      {isFilterOpen ?
+        <FilterBody updateSelectedFilters={updateSelectedFilters} selectedFilters={selectedFilters} initState={initState} />
+        : <div />}
+    </div>
   );
 }
 

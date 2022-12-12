@@ -13,8 +13,9 @@ const RadioGroup = ({ options, selectedFilters, updateSelectedFilters }: FilterO
                 options.map((option: string) => {
                     return (
                         <div key={option}>
-                            <label className="text-secondaryWhite">
-                                <input type="radio" checked={selectedFilters.time === option} onChange={() => handleRadioClicked(option)} />
+                            <label className="text-secondaryWhite text-sm flex items-center mb-3.5">
+                                <input type="radio" className="mr-2 cursor-pointer"
+                                    checked={selectedFilters.time === option} onChange={() => handleRadioClicked(option)} />
                                 {option}
                             </label>
 
