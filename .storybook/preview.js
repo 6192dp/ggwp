@@ -1,4 +1,7 @@
-import '../src/index.css';
+
+import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
+import 'tailwindcss/tailwind.css';
+ require('../src/index.css');
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

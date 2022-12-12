@@ -11,10 +11,14 @@ export default {
 
 const Template: ComponentStory<typeof Collapsible> = (args) => <Collapsible {...args} />;
 
-export const CheckboxComponent = Template.bind({});
+export const CollapsibleComponent = Template.bind({});
 
-CheckboxComponent.args = {
-    filterOption: { options: [], title: '', type: '' },
+CollapsibleComponent.args = {
+    filterOption: { options: [], title: 'Check1', type: '' },
     filterType: '',
-    selectedFilters: { time: '', severity: [''] }
+    selectedFilters: { time: '', severity: ['Low'] }
 };
+
+CollapsibleComponent.argTypes = {
+    updateSelectedFilters: { action: 'Click Collapsible Component' }
+}

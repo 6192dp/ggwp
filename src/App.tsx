@@ -6,7 +6,7 @@ import FilterTile from "./components/Filter/FilterTile";
 const initState = { severity: [''], time: '' }
 
 function App() {
-  const [isFilterOpen, updateIsFilterOpen] = useState(false);
+  const [isFilterOpen, updateIsFilterOpen] = useState(true);
   const [selectedFilters, updateSelectedFilters] = useState({ ...initState });
 
   const handleCancelClick = (item: string, label: string) => {
