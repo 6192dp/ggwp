@@ -10,7 +10,9 @@ module.exports = {
       'white': '#ffffff',
       'secondayWhite': '#E4E7EC',
       'primaryBlue': '#1967FF',
-      'secondayBlue': '#4785FF'
+      'secondayBlue': '#4785FF',
+      'primaryGray': '#344054',
+      'secondaryGray': '#1D2939',
     },
     extend: {},
   },
