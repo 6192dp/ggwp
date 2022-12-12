@@ -1,7 +1,8 @@
 import FilterSelectedIcon from '../../images/filter.svg';
 import FilterUnselectedIcon from '../../images/filter_u.svg';
+import { FilterButtonProps } from './types';
 
-const FilterButton = ({ updateIsFilterOpen, isFilterOpen }: { updateIsFilterOpen: React.Dispatch<React.SetStateAction<boolean>>, isFilterOpen: boolean }) => {
+const FilterButton = ({ updateIsFilterOpen, isFilterOpen }: FilterButtonProps) => {
 
     const toggleFilterButton = () => {
         updateIsFilterOpen(!isFilterOpen)

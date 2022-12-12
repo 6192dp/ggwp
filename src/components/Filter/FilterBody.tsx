@@ -1,9 +1,13 @@
 import ResetIcon from '../../images/reset.svg';
 import { filterOptions } from '../../utils/FilterOptions';
 import Collapsible from '../Collapsible/Collapsible';
-import { FilterOptionProps } from './types';
+import { FilterBodyProps, FilterOptionProps } from './types';
 
-const FilterBody = () => {
+const FilterBody = ({selectedFilters, updateSelectedFilters, initState}: FilterBodyProps) => {
+
+    const handleResetClick = () => {
+        updateSelectedFilters(initState);
+    }
 
     return (
 
@@ -12,13 +16,14 @@ const FilterBody = () => {
                 <div className='text-white'>
                     Filter data by
                 </div>
-                <div className='flex'>
+                <div className='flex' onClick={handleResetClick}>
                     <img src={ResetIcon} alt="Reset Icon" />
                     <span className='text-primaryBlue'>Reset</span>
                 </div>
             </div>
             {filterOptions?.map((filterOption: FilterOptionProps) => {
-                return <Collapsible filterOption={filterOption} filterType={filterOption.type}/>
+                return <Collapsible key={filterOption.title} filterOption={filterOption} filterType={filterOption.type}
+                    selectedFilters={selectedFilters} updateSelectedFilters={updateSelectedFilters} />
             })}
         </div>
     )

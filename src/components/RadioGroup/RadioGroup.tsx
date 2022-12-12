@@ -1,22 +1,27 @@
-import { useState } from "react";
-import { FilterOptionProps } from "../Filter/types";
+import { FilterOptions } from "../Filter/types";
 
-const RadioGroup = ({ options }: any) => {
-
-    const [selectedValue, updateSelectedValue] = useState(null);
+const RadioGroup = ({ options, selectedFilters, updateSelectedFilters }: FilterOptions) => {
+    const handleRadioClicked = (option: string) => {
+        const newFilters = { ...selectedFilters };
+        newFilters.time = option;
+        updateSelectedFilters(newFilters);
+    }
 
     if (options?.length) {
-        return options?.map((option: any) => {
-            return (
-                <div key={option}>
-                    <label className="text-secondaryWhite">
-                        <input type="radio" checked={selectedValue === option} onChange={() => updateSelectedValue(option)} />
-                        {option}
-                    </label>
+        return <>
+            {
+                options.map((option: string) => {
+                    return (
+                        <div key={option}>
+                            <label className="text-secondaryWhite">
+                                <input type="radio" checked={selectedFilters.time === option} onChange={() => handleRadioClicked(option)} />
+                                {option}
+                            </label>
 
-                </div>
-            )
-        })
+                        </div>
+                    )
+                })
+            }</>
     }
     return <div />
 
