@@ -1,6 +1,7 @@
 import ResetIcon from '../../images/reset.svg';
 import { filterOptions } from '../../utils/FilterOptions';
 import Collapsible from '../Collapsible/Collapsible';
+import { FilterOptionProps } from './types';
 
 const FilterBody = () => {
 
@@ -16,8 +17,8 @@ const FilterBody = () => {
                     <span className='text-primaryBlue'>Reset</span>
                 </div>
             </div>
-            {filterOptions?.map((filterOption) => {
-                return <Collapsible filterOption={filterOption} />
+            {filterOptions?.map((filterOption: FilterOptionProps) => {
+                return <Collapsible filterOption={filterOption} filterType={filterOption.type}/>
             })}
         </div>
     )
